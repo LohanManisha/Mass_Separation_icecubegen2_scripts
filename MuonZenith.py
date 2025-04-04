@@ -1,3 +1,6 @@
+## To read zenith angle in radian and number of muons from I3MCTree
+
+
 import matplotlib.pyplot as plt
 import numpy as np
 import math
