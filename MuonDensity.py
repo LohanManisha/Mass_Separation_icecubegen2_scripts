@@ -1,3 +1,5 @@
+## This script is used to calculate muon density
+
 import matplotlib.pyplot as plt
 import numpy as np
 from icecube import icetray, dataclasses, clsim, photonics_service, simclasses
@@ -9,7 +11,7 @@ energy = []
 #BinEdges = []
 Density = [] 
 #files = glob("./*.i3.gz")
-files = glob("/home/manisha/t3store3/surface16August/proton/lgE_16.*/sin2_0.0/000*.i3.gz")
+files = glob("/home/user/proton/lgE_16.*/sin2_0.0/000*.i3.gz")
 for filename in files:
 	file = dataio.I3File(filename)
 	radius = []
@@ -45,17 +47,12 @@ Density = np.array(Density)
 print(Density)
 Number_of_Rows = Density.shape[1]
 for row in range(Number_of_Rows):
-#	plt.scatter(energy, Density[:,row])
 	plt.plot(energy, Density[:,row], linestyle="", marker="")
-#print(
+
 	print(Density[:,row])
-#lgE = mp.log10(energy)
-#lgD = 
+
 plt.xscale("log")
 plt.yscale("log")
-#plt.scatter(energy, Density)
-#energy = np.log10(energy)
-#plt.scatter(lgMu, lgE)
 plt.xlabel("Energy")
 plt.ylabel("Muon Density")
 plt.savefig("MuonDensity24.png")
