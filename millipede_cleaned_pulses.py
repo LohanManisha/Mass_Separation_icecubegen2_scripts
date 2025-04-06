@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """
-## To do hit cleaning and then calculate reconstructed energy loss of cleaned pulses. 
+## To do hit cleaning and then calculate reconstructed energy loss using cleaned pulses. 
 """
 
 from I3Tray import *
