@@ -1,6 +1,6 @@
 #!/bin/sh /cvmfs/icecube.opensciencegrid.org/py3-v4.1.1/icetray-start
 #METAPROJECT /cvmfs/icecube.opensciencegrid.org/users/gen2-optical-sim/software/icetray/build
-## this script is used for trigger and electronics simulation
+## this script is used for trigger and electronics simulation for IceCube-Gen2
 from os.path import expandvars
 from icecube import icetray, dataclasses, dataio, phys_services, trigger_sim
 from icecube.icetray import OMKey
