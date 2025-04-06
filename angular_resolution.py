@@ -1,4 +1,4 @@
-## script to calculate opening angle between MC truth and reconstructed direction
+## script to calculate angular resolution
 
 import matplotlib.pyplot as plt
 import numpy as np
