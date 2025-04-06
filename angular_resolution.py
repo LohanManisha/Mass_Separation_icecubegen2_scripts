@@ -1,3 +1,5 @@
+## script to calculate opening angle between MC truth and reconstructed direction
+
 import matplotlib.pyplot as plt
 import numpy as np
 import math
@@ -6,7 +8,7 @@ from icecube.icetray import I3Units
 from icecube import dataio
 from glob import glob
 
-files = glob("/home/manisha/t3store3/inice/src/millipede/resources/examples/hit_cleaning_COG_hits_millipede_Proton_SplineMPE_400m_R_2000ns_T/Proton_millipede_*_SplineMPE.i3.gz")
+files = glob("/home/user/inice/src/millipede/resources/examples/hit_cleaning_COG_hits_millipede_Proton_SplineMPE_400m_R_2000ns_T/Proton_millipede_*_SplineMPE.i3.gz")
 for filename in files:
 	file = dataio.I3File(filename)
 	print(filename)
