@@ -1,3 +1,5 @@
+## Script to read the number of DOM hits.
+
 import matplotlib.pyplot as plt
 import numpy as np
 import math
@@ -5,7 +7,7 @@ from icecube import icetray, dataclasses, clsim, photonics_service, simclasses
 from icecube import dataio
 from glob import glob
 
-files = glob("/home/manisha/t3store3/inice/src/Gen2-Scripts/python/segments/Detector_SIM_Iron_Resample_4_times_lgE_16.9_sin2_0.0/Iron_Trigger_*.i3.gz")
+files = glob("/home/user/inice/src/Gen2-Scripts/python/segments/Detector_SIM_Iron_Resample_4_times_lgE_16.9_sin2_0.0/Iron_Trigger_*.i3.gz")
 for filename in files:
 	file = dataio.I3File(filename)
 	print(filename)	
