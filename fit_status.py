@@ -1,3 +1,5 @@
+## Script to check the fit status
+
 import matplotlib.pyplot as plt
 import numpy as np
 import math
