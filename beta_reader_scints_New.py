@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
-## Using this script, can read the value of reconstructed beta as well as Sref variables. 
+## script to read the value of reconstructed beta as well as Sref variables. 
 # In[ ]:
 
 
