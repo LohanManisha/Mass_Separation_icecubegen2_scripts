@@ -1,4 +1,4 @@
-## This script can be used to read the number of muons and electrons from I3MCTree
+## script to read the number of muons and electrons from I3MCTree
 
 import matplotlib.pyplot as plt
 import numpy as np
