@@ -1,6 +1,6 @@
 #!/bin/sh /cvmfs/icecube.opensciencegrid.org/py3-v4.1.1/icetray-start
 #METAPROJECT /cvmfs/icecube.opensciencegrid.org/users/gen2-optical-sim/software/icetray/build
-## this script is used for photon propagation
+## script for photon propagation
 import os
 import sys,getopt,string
 from os.path import expandvars
