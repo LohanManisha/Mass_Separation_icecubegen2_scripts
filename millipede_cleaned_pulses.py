@@ -1,10 +1,7 @@
 #!/usr/bin/env python
 
 """
-Example millipede muon energy loss fits.  The first fits the
-loss pattern as stochastic losses (e.g. from a high-energy
-muon), and the second as continuous losses.
-input: offline reconstructed .i3 file(s)
+## To do hit cleaning and then calculate reconstructed energy loss of cleaned pulses. 
 """
 
 from I3Tray import *
@@ -24,9 +21,9 @@ from icecube import phys_services
 
 import argparse
 parser = argparse.ArgumentParser()
-GCD = '/home/manisha/t3store3/inice/src/millipede/resources/examples/IceCubeHEX_Sunflower_240m_v4.0beta_ExtendedDepthRange.GCDScintAnt-shift.i3.gz'
+GCD = '/home/user/inice/src/millipede/resources/examples/IceCubeHEX_Sunflower_240m_v4.0beta_ExtendedDepthRange.GCDScintAnt-shift.i3.gz'
 parser.add_argument('--gcd', type=str, metavar='FILE', default=GCD, help='GCD file')
-parser.add_argument('--output', type=str, metavar='FILE', default='/home/manisha/t3store3/inice/src/millipede/resources/examples/hit_cleaning_COG_hits_millipede_Iron_4_Resampling_SplineMPE_400m_R_2000ns_T_lgE_16.8_sin2_0.0/Iron_199.i3.gz', help='Output')
+parser.add_argument('--output', type=str, metavar='FILE', default='/home/user/inice/src/millipede/resources/examples/hit_cleaning_COG_hits_millipede_Iron_4_Resampling_SplineMPE_400m_R_2000ns_T_lgE_16.8_sin2_0.0/Iron_199.i3.gz', help='Output')
 
 
 parser.add_argument('result', type=str, nargs='+', metavar='FILE', help='Simulation Files')
