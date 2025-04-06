@@ -2,7 +2,7 @@
 
 #---------------------------------------------------------------------
 #---------------------------------------------------------------------
-#    This is JUST an example how to run 3 STEP reconstruction  
+#   Script to run 3 STEP reconstruction  
 #    with scintillators. Only ESTIMATION on scint pulses is used !!!     
 #---------------------------------------------------------------------
 #---------------------------------------------------------------------
@@ -20,9 +20,9 @@ import numpy as np
 
 import argparse
 parser = argparse.ArgumentParser()
-GCD = '/home/manisha/t3store3/IceCubeHEX_Sunflower_240m_v4.0beta_ExtendedDepthRange.GCDScintAnt-shift.i3.gz'
+GCD = '/home/user/IceCubeHEX_Sunflower_240m_v4.0beta_ExtendedDepthRange.GCDScintAnt-shift.i3.gz'
 parser.add_argument('--gcd', type=str, metavar='FILE', default=GCD, help='GCD file')
-parser.add_argument('--output', type=str, metavar='FILE', default='/home/manisha/t3store3/surfacearray/src/rock_bottom/resources/examples/Rockbottom_iron_4_times_lgE_17.0_sin2_0.0/iron_169.i3.gz', help='Output')
+parser.add_argument('--output', type=str, metavar='FILE', default='/home/user/surfacearray/src/rock_bottom/resources/examples/Rockbottom_iron_4_times_lgE_17.0_sin2_0.0/iron_169.i3.gz', help='Output')
 parser.add_argument('result', type=str, nargs='+', metavar='FILE', help='Simulation Files') 
 args = parser.parse_args()
 tray = I3Tray()
