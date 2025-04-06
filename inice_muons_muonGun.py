@@ -1,9 +1,11 @@
+## Script to estimate in-ice muons using MuonGun
+
 import matplotlib.pyplot as plt
 import numpy as np
 from icecube import icetray, dataclasses, clsim, photonics_service, simclasses, dataio
 from icecube import MuonGun
 from glob import glob
-gcdfile = "/home/manisha/t3store3/inice/src/Gen2-Scripts/python/segments/MuonGun/IceCubeHEX_Sunflower_240m_v4.0beta_ExtendedDepthRange.GCDScintAnt-shift.i3.gz"
+gcdfile = "/home/user/inice/src/Gen2-Scripts/python/segments/MuonGun/IceCubeHEX_Sunflower_240m_v4.0beta_ExtendedDepthRange.GCDScintAnt-shift.i3.gz"
 gcd = dataio.I3File(gcdfile)
 frame = gcd.pop_frame()
 if "I3Geometry" in frame.keys(): frame = gcd.pop_frame()
@@ -12,7 +14,7 @@ omgeomap = frame['I3Geometry'].omgeo
 positions = [omgeo.position for omgeo in omgeomap.values()] 
 gen2_inice_surface = MuonGun.ExtrudedPolygon(positions, 300)
 
-files = glob("/home/manisha/t3store3/inice/src/Gen2-Scripts/python/segments/helium_clsim/helium_clsim_9L_h5.i3.gz")
+files = glob("/home/user/inice/src/Gen2-Scripts/python/segments/helium_clsim/helium_clsim_9L_h5.i3.gz")
 for filename in files:
 	file = dataio.I3File(filename)
 	while file.more():
@@ -32,8 +34,8 @@ for filename in files:
 
 				if e0 > 0: nMuonsEntering += 1
 				if e1 > 0: nMuonsExiting += 1
-				print(e0)
+				#print(e0)
 			print("Found {} muons entering the detector and {} exiting".format(nMuonsEntering, nMuonsExiting))
-#				print(e0)
+#				#print(e0)
 
 
